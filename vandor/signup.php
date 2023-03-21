@@ -23,7 +23,7 @@
     };
 
     mysqli_query($connect, "INSERT INTO `user` (`id`, `full_name`, `login`, `email`, `password`, `avatar`) 
-    VALUES (NULL, 'full_name ', 'login', 'email', 'password', $path)");
+    VALUES (NULL, '$full_name ', '$login', '$email', '$password', '$path')");
     $_SESSION['massage'] = 'регистрация прошла успешно';
     header('Location: ../index.php');
 
