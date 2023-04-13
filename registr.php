@@ -29,7 +29,7 @@
   <input type="password" name="password" placeholder="Введите пароль">
   <label >Подтверждение пороля</label>
   <input type="password" name="password_confirm" placeholder="Подтвердите пароль">
-  <button>Войти</button>
+  <button type="submit">Войти</button>
   <p>
     У вас уже есть акауин? - <a href="index.php">Авторизируйтесь</a>!
   </p>

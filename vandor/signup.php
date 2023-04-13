@@ -22,6 +22,8 @@
       header($string);
     };
 
+    $password = md5($password);//не шифрует пороль
+
     mysqli_query($connect, "INSERT INTO `user` (`id`, `full_name`, `login`, `email`, `password`, `avatar`) 
     VALUES (NULL, '$full_name ', '$login', '$email', '$password', '$path')");
     $_SESSION['massage'] = 'регистрация прошла успешно';

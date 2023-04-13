@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -12,15 +16,24 @@
 <!--Форма авторизации-->
 
 
-<form action="" method="">
+<form action="vandor/signin.php" method="post">
   <label for="">Логин</label>
-  <input type="text" placeholder="Введите свой логин">
+  <input type="text" name="Login" placeholder="Введите свой логин">
   <label for="">Пароль</label>
-  <input type="password" placeholder="Введите пороль">
-  <button>Войти</button>
+  <input type="password" name="password" placeholder="Введите пороль">
+  <button type="submit">Войти</button>
   <p>
     У вас нет аккаунта? - <a href="registr.php">Зарегистрируйтесь</a>!
   </p>
+  <?php 
+    if ( $_SESSION['massage']):?>
+      <p class="msg"><?=$_SESSION['massage']?></p>;//не выводит сообщение 
+    
+    <?php 
+    unset( $_SESSION['massage']);
+    endif;
+    ?>
+
 
   
 </form>
