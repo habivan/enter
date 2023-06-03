@@ -51,3 +51,8 @@ button {
   text-align: center;
   font-weight: bold;
 }
+
+.log {
+  text-align: right;
+  color: #7c9ab7;
+}

@@ -1,5 +1,8 @@
 <?php
-  session_start()
+  session_start();
+  if($_SESSION['user']){
+    header('Location: profile.php');
+  };
 ?>
 
 <!DOCTYPE html>
@@ -34,14 +37,12 @@
     У вас уже есть акауин? - <a href="index.php">Авторизируйтесь</a>!
   </p>
     <?php 
-    if ( $_SESSION['massage']){
+    if ( !empty($_SESSION['massage'])){
       echo '<p class="msg">'. $_SESSION['massage'].'</p>';
     }
       
     unset( $_SESSION['massage']);
     ?>
-
-  
 </form>
   
 </body>
